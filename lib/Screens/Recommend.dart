@@ -27,10 +27,10 @@ class Recomends extends StatelessWidget {
           ),
 
           RecomendCard(
-            image: "assets/images/c.jpg",
-            title: "Frames",
+            image: "assets/car/1.jpg",
+            title: "Car",
             country: "India",
-            price: 440,
+            price: 450000,
             press: () {Navigator.push(
               context,
               MaterialPageRoute(
@@ -85,7 +85,9 @@ class RecomendCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.asset(image),
+          Container(
+            height: 100,
+              child: Image.asset(image)),
           GestureDetector(
             onTap: press,
             child: Container(
