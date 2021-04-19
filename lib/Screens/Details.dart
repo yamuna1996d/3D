@@ -86,7 +86,7 @@ class DetailScreen extends StatelessWidget {
             // TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(top: 2),
+              padding: const EdgeInsets.only(top: 41),
               child: Row(
                 children: <Widget>[
                   SizedBox(

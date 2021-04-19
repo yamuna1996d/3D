@@ -79,8 +79,7 @@ class _NewCardState extends State<NewCard> {
       backgroundColor: Colors.white,
       body: LayoutBuilder(
         builder: (_, constraints) => GestureDetector(
-          onPanDown: (val) {
-//            FocusScope.of(context).requestFocus(FocusNode());
+          onPanDown: (val) {FocusScope.of(context).requestFocus(FocusNode());
           },
           behavior: HitTestBehavior.opaque,
           child: SingleChildScrollView(
@@ -105,7 +104,14 @@ class _NewCardState extends State<NewCard> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        CloseButton()
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            child: Icon(Icons.close_outlined,size: 30,color: PrimaryColor,),
+                          ),
+                        )
                       ],
                     ),
                     Container(
