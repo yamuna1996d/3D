@@ -1,5 +1,4 @@
 import 'package:dapp/Screens/BottamNav.dart';
-import 'package:dapp/Screens/Nav.dart';
 import 'package:dapp/Screens/Recommend.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -193,7 +192,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Nav(),
+      bottomNavigationBar: BottomNavBarV2(),
     );
   }
 }

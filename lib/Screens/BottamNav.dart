@@ -1,3 +1,4 @@
+import 'package:dapp/NavBar_Components/User_profile.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -40,10 +41,11 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                       children: [
                         IconButton(
                           icon: Icon(
-                            Icons.home,
+                            Icons.person,
                             color: currentIndex == 0 ? PrimaryColor : Colors.grey.shade400,
                           ),
                           onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
                             setBottomBarIndex(0);
                           },
                           splashColor: Colors.white,
