@@ -131,6 +131,16 @@ class _CheckOutPageState extends State<CheckOutPage> {
                   ),
                 ),
                 Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    'Total Amount  :',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: darkGrey,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     'Select Payment Method',
@@ -142,21 +152,11 @@ class _CheckOutPageState extends State<CheckOutPage> {
                 ),
                 SizedBox(
                   height: 150,
-                  child: Swiper(
-                    itemCount: 1,
-                    itemBuilder: (_, index) {
-                      return GestureDetector(
+                  child: GestureDetector(
                         onTap: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>Crid()));
                         },
-                          child: CreditCard());
-                    },
-                    scale: 0.8,
-                    controller: swiperController,
-                    viewportFraction: 0.6,
-                    loop: false,
-                    fade: 0.7,
-                  ),
+                          child: CreditCard()),
                 ),
                 SizedBox(height: 10,),
             Padding(
