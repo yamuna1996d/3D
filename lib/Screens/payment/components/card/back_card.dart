@@ -25,10 +25,10 @@ class BackCard extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(
-                    top: 20,
+                    top: 10,
                     right: 5),
-                padding: EdgeInsets.only(right:20),
-                height: 40,
+                padding: EdgeInsets.only(right:10),
+                height: 38,
                 width: 50,
                 color: Colors.white,
                 child: Align(
@@ -38,7 +38,7 @@ class BackCard extends StatelessWidget {
               ),
               Spacer(),
               Padding(
-                padding: EdgeInsets.only(right: 10),
+                padding: EdgeInsets.only(right: 10,top: 5),
                 child: Text("Service Hotline / 028-6577",
                     style: Theme.of(context)
                         .textTheme

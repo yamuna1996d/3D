@@ -1,6 +1,5 @@
 import 'package:dapp/Screens/address/add_address_page.dart';
 import 'package:dapp/Screens/payment/components/card/Credit.dart';
-import 'package:dapp/Screens/payment/unpaid_page.dart';
 import 'package:dapp/components/credit_card.dart';
 import 'package:dapp/components/shop_item_list.dart';
 import 'package:dapp/constraints.dart';
@@ -76,8 +75,9 @@ class _CheckOutPageState extends State<CheckOutPage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.wallet_travel),
-            onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => UnpaidPage())),
+            // onPressed: () => Navigator.of(context).push(
+            //     MaterialPageRoute(builder: (_) => UnpaidPage())
+            //     ),
           )
         ],
         title: Text(

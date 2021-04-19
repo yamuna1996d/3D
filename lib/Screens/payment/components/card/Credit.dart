@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'detail_page.dart';
 import 'front_card.dart';
 
 
@@ -99,11 +100,11 @@ class _CridState extends State<Crid> {
                 return child;
               },
               child: GestureDetector(
-                // onTap: () => Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) =>
-                //             DetailPage(card: cards[index]))),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            DetailPage(card: cards[index]))),
                 child: Container(
                   padding:
                   EdgeInsets.only(bottom: SizeConfig.defaultHeight * 5),

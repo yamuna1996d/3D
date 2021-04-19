@@ -3,7 +3,6 @@ import 'dart:math' as math;
 
 import 'package:flutter/services.dart';
 import '../constraints.dart';
-
 class SelectCardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

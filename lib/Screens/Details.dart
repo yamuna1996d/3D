@@ -85,42 +85,45 @@ class DetailScreen extends StatelessWidget {
       ),
             // TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
             SizedBox(height: 20),
-            Row(
-              children: <Widget>[
-                SizedBox(
-                  width: size.width / 2,
-                  height: 60,
-                  child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(40),
-                      ),
-                    ),
-                    color: PrimaryColor,
-                    onPressed: () {},
-                    child: Text(
-                      "Buy Now",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CheckOutPage(),
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: size.width / 2,
+                    height: 60,
+                    child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(40),
                         ),
-                      );
-                    },
-                    child: Text("Add to Cart"),
+                      ),
+                      color: PrimaryColor,
+                      onPressed: () {},
+                      child: Text(
+                        "Buy Now",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CheckOutPage(),
+                          ),
+                        );
+                      },
+                      child: Text("Add to Cart"),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
