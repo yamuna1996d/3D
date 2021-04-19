@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 enum PaymentSources { google, paypal, apple,paytm }
-//TODO: NOT DONE. WHEEL SCROLL QUANTITY
+
 class CheckOutPage extends StatefulWidget {
   CheckOutPage({Key key}) : super(key: key);
   @override
