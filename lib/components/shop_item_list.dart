@@ -1,9 +1,8 @@
-import 'package:ecommerce_int2/app_properties.dart';
-import 'package:ecommerce_int2/models/product.dart';
-import 'package:ecommerce_int2/screens/product/components/color_list.dart';
-import 'package:ecommerce_int2/screens/product/components/shop_product.dart';
+import 'package:dapp/models/product.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:numberpicker/numberpicker.dart';
+
 
 class ShopItemList extends StatefulWidget {
   final Product product;
@@ -32,7 +31,6 @@ class _ShopItemListState extends State<ShopItemList> {
                 margin: EdgeInsets.symmetric(horizontal: 16.0),
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    boxShadow: shadow,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10))),
@@ -51,7 +49,7 @@ class _ShopItemListState extends State<ShopItemList> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
-                                color: darkGrey,
+                                color: Colors.grey,
                               ),
                             ),
                             Align(
@@ -64,12 +62,12 @@ class _ShopItemListState extends State<ShopItemList> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    ColorOption(Colors.red),
+                                    //ColorOption(Colors.red),
                                     Text(
-                                      '\$${widget.product.price}',
+                                      '\₹${widget.product.price}',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          color: darkGrey,
+                                          color: Colors.grey,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18.0),
                                     )
@@ -119,6 +117,41 @@ class _ShopItemListState extends State<ShopItemList> {
               )),
         ],
       ),
+    );
+  }
+}
+
+class ShopProductDisplay extends StatelessWidget {
+  final Product product;
+  final Function onPressed;
+
+  const ShopProductDisplay(this.product,{Key key,this.onPressed}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 150,
+      width: 200,
+      child: Stack(children: <Widget>[
+        Positioned(
+          left: 50,
+          top: 5,
+          child: SizedBox(
+              height:80,
+              width: 80,
+              child: Image.asset('${product.image}',fit: BoxFit.contain,)),
+        ),
+        Positioned(
+          right: 30,
+          bottom: 25,
+          child: Align(
+            child: IconButton(
+              icon: Icon(Icons.delete_outline,color: Colors.red[800],),
+              onPressed: onPressed,
+            ),
+          ),
+        )
+      ]),
     );
   }
 }

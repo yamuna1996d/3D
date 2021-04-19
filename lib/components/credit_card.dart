@@ -5,10 +5,10 @@ class CreditCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       height: 200,
-      width: 250,
+      width: 350,
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-          color: Colors.deepPurple[700],
+          color: Colors.deepPurpleAccent[400],
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -36,7 +36,7 @@ class CreditCard extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               Text(
-                'GEORGE W BUSH',
+                'Yamuna',
                 style: TextStyle(color: Colors.white),
               ),
             ],

@@ -1,6 +1,7 @@
-import 'package:ecommerce_int2/app_properties.dart';
-import 'package:ecommerce_int2/screens/product/components/color_list.dart';
+
 import 'package:flutter/material.dart';
+
+import 'color_list.dart';
 
 class CardColorList extends StatefulWidget {
   final List<Color> colorList;

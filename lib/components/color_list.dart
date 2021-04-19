@@ -1,5 +1,7 @@
-import 'package:ecommerce_int2/app_properties.dart';
+
 import 'package:flutter/material.dart';
+
+import '../constraints.dart';
 
 class ColorList extends StatefulWidget {
   final List<Color> colorList;

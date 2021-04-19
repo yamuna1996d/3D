@@ -25,11 +25,11 @@ class CreditCard {
 List<CreditCard> cards = [
   CreditCard(
     id: 1,
-    cardHolder: "DevDesign",
+    cardHolder: "Yamuna",
     securityCode: "4260 553",
     number: "1234 5678 9101 1123",
     brand: CardBrand.visa,
-    amount: 2572.52,
+    amount: 257228.52,
     colors: [
       Color(0xFF0000FF),
       Color(0XFF377CFF),
@@ -37,7 +37,7 @@ List<CreditCard> cards = [
   ),
   CreditCard(
     id: 2,
-    cardHolder: "DevDesign",
+    cardHolder: "Yamuna",
     securityCode: "4260 553",
     number: "1234 5678 9101 1123",
     brand: CardBrand.mastercard,
@@ -49,7 +49,7 @@ List<CreditCard> cards = [
   ),
   CreditCard(
     id: 3,
-    cardHolder: "DevDesign",
+    cardHolder: "Yamuna",
     securityCode: "4260 553",
     number: "1234 5678 9101 1123",
     brand: CardBrand.mastercard,
