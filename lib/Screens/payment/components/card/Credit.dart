@@ -58,7 +58,7 @@ class _CridState extends State<Crid> {
               Balance(
                   previousIndex: _previousIndex, currentIndex: _currentIndex),
               _buildCardsList(),
-              _buildPageIndicator(),
+
             ],
           ),
         ),
