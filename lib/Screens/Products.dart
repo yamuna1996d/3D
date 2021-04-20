@@ -1,5 +1,6 @@
 import 'package:dapp/NavBar_Components/More_Products.dart';
 import 'package:dapp/Screens/BottamNav.dart';
+import 'package:dapp/Screens/Catagory_Screen.dart';
 import 'package:dapp/Screens/Recommend.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     Size size = MediaQuery
         .of(context)
         .size;
@@ -135,7 +137,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                   color: PrimaryColor,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductCard()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CategoryScreen(),
+                      ),
+                    );
+
                   },
                   child: Text(
                     "More",
@@ -175,7 +183,9 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   color: PrimaryColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductCard()));
+                  },
                   child: Text(
                     "More",
                     style: TextStyle(color: Colors.white),

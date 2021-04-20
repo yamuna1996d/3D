@@ -1,4 +1,5 @@
 import 'package:dapp/Screens/Details.dart';
+import 'package:dapp/Screens/viewpage.dart';
 import 'package:flutter/material.dart';
 import '../constraints.dart';
 
@@ -20,7 +21,7 @@ class Recomends extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailScreen(),
+                  builder: (context) => DemoPage(),
                 ),
               );
             },
@@ -34,7 +35,7 @@ class Recomends extends StatelessWidget {
             press: () {Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DetailScreen(),
+                builder: (context) => DemoPage(),
               ),
             );
             },
@@ -47,7 +48,7 @@ class Recomends extends StatelessWidget {
             press: () {Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DetailScreen(),
+                builder: (context) => DemoPage(),
               ),
             );
             },

@@ -1,4 +1,5 @@
 
+import 'package:dapp/NavBar_Components/whishlist_products.dart';
 import 'package:dapp/Screens/MyBag.dart';
 import 'package:dapp/Screens/viewpage.dart';
 import 'package:flutter/material.dart';
@@ -99,9 +100,11 @@ class DetailScreen extends StatelessWidget {
                         ),
                       ),
                       color: PrimaryColor,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MyWishlist()));
+                      },
                       child: Text(
-                        "Buy Now",
+                        "Add to WishList",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -153,18 +156,18 @@ class IconCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(30),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 15),
-            blurRadius: 22,
-            color: PrimaryColor.withOpacity(0.22),
-          ),
-          BoxShadow(
-            offset: Offset(-15, -15),
-            blurRadius: 20,
-            color: Colors.white,
-          ),
-        ],
+        //boxShadow: [
+        //   BoxShadow(
+        //     offset: Offset(0, 15),
+        //     blurRadius: 22,
+        //     color: PrimaryColor.withOpacity(0.22),
+        //   ),
+        //   BoxShadow(
+        //     offset: Offset(-15, -15),
+        //     blurRadius: 20,
+        //     color: Colors.white,
+        //   ),
+        // ],
       ),
       child: SvgPicture.asset(icon),
     );

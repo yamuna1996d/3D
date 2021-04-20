@@ -21,7 +21,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
 
   List<Product> products = [
     Product(
-        'assets/car/1.jpg',
+        'assets/car/1.jpeg',
         'Boat roackerz 400 On-Ear Bluetooth Headphones',
         'description',
         450000),
