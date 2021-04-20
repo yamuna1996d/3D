@@ -13,9 +13,9 @@ class Recomends extends StatelessWidget {
         children: <Widget>[
           RecomendCard(
             image: "assets/images/a.jpg",
-            title: "Art",
+            title: "Special Pack",
             country: "India",
-            price: 440,
+            price: 14440,
             press: () {
               Navigator.push(
                 context,
@@ -27,8 +27,8 @@ class Recomends extends StatelessWidget {
           ),
 
           RecomendCard(
-            image: "assets/car/1.jpg",
-            title: "Car",
+            image: "assets/car/1.jpeg",
+            title: "Camera",
             country: "India",
             price: 450000,
             press: () {Navigator.push(
@@ -41,7 +41,7 @@ class Recomends extends StatelessWidget {
           ),
           RecomendCard(
             image: "assets/images/c.jpg",
-            title: "Frames",
+            title: "Tripod",
             country: "India",
             price: 440,
             press: () {Navigator.push(
@@ -82,7 +82,7 @@ class RecomendCard extends StatelessWidget {
         top: DefaultPadding / 2,
         bottom: DefaultPadding * 2.5,
       ),
-      width: size.width * 0.4,
+      width: size.width * 0.5,
       child: Column(
         children: <Widget>[
           Container(
@@ -91,6 +91,7 @@ class RecomendCard extends StatelessWidget {
           GestureDetector(
             onTap: press,
             child: Container(
+              width: 300,
               padding: EdgeInsets.all(DefaultPadding / 2),
               decoration: BoxDecoration(
                 color: Colors.white,

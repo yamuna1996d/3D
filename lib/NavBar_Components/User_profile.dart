@@ -66,7 +66,7 @@ class Profile extends StatelessWidget {
             SizedBox(height: 20,),
             ProfileMenu(
               text: "My Account",
-              icon: "assets/icons/user (1).svg",
+              icon: "assets/icons/users.svg",
               press: () => {},
             ),
             ProfileMenu(

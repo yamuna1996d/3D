@@ -66,15 +66,15 @@ class DetailScreen extends StatelessWidget {
                   image: DecorationImage(
                     alignment: Alignment.centerLeft,
                     fit: BoxFit.cover,
-                    image: AssetImage("assets/car/1.jpg"),
+                    image: AssetImage("assets/car/1.jpeg"),
                   ),
                 ),
                 child: Container(
                   margin: EdgeInsets.only(top: 500,right: 120),
                   child: Column(
                     children: [
-                      Text("NAME   :  ART",style: TextStyle(color: Colors.white),),
-                      Text("PRICE   :  ₹440",style: TextStyle(color: Colors.white),),
+                      Text("NAME   :  Camera",style: TextStyle(color: PrimaryColor),),
+                      Text("PRICE   :  ₹44000",style: TextStyle(color: PrimaryColor),),
                     ],
                   ),
                 ),

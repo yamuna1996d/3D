@@ -1,3 +1,4 @@
+import 'package:dapp/components/glitch.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:imageview360/imageview360.dart';
@@ -37,28 +38,40 @@ class _DemoPageState extends State<DemoPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
                   Stack(
                     children: <Widget>[
                       Container(
-                        height: 450,
-                        margin: EdgeInsets.only(left: 30),
-                        padding: EdgeInsets.only(top: 150,),
+                        height: 500,
+                        width: 320,
+                        margin: EdgeInsets.only(left:40,),
+                        padding: EdgeInsets.only(top: 150,left: 10),
                       decoration: BoxDecoration(
                           color:Colors.white,
-                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60),)
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),)
                         ),
-                        child: (imagePrecached == true)
-                            ? ImageView360(
-                          key: UniqueKey(),
-                          imageList: imageList,
-                          autoRotate: false,
-                          rotationCount: 2,
-                          rotationDirection: RotationDirection.anticlockwise,
-                          frameChangeDuration: Duration(milliseconds: 170),
-                          swipeSensitivity: swipeSensitivity,
-                          allowSwipeToRotate: allowSwipeToRotate,
+                        child: Column(
+                          children: [
+                            Container(
+                              color: Colors.white,
+                              child: GlithEffect(
+                                child: Text("swipe",style: TextStyle(color: PrimaryColor,),),
+                              ),
+                            ),
+                            (imagePrecached == true)
+                                ? ImageView360(
+                              key: UniqueKey(),
+                              imageList: imageList,
+                              autoRotate: false,
+                              rotationCount: 2,
+                              rotationDirection: RotationDirection.anticlockwise,
+                              frameChangeDuration: Duration(milliseconds: 170),
+                              swipeSensitivity: swipeSensitivity,
+                              allowSwipeToRotate: allowSwipeToRotate,
+                            )
+                                : Text("Pre-Caching images..."),
+                          ],
                         )
-                            : Text("Pre-Caching images..."),
                       ),
                     ],
                   ),
@@ -74,7 +87,7 @@ class _DemoPageState extends State<DemoPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "CAR",
+                          "CAMERA",
                           style: TextStyle(
                             fontSize: 26,
                             fontWeight: FontWeight.w600,
@@ -82,7 +95,7 @@ class _DemoPageState extends State<DemoPage> {
                           ),
                         ),
                         Text(
-                          "Hyundai",
+                          "SONY",
                           style: TextStyle(
                             fontSize: 13,
                             color: Colors.grey,
@@ -197,10 +210,10 @@ class _DemoPageState extends State<DemoPage> {
   }
 
   void updateImageList(BuildContext context) async {
-    for (int i = 1; i <= 36; i++) {
-      imageList.add(AssetImage('assets/car/$i.jpg'));
+    for (int i = 1; i <= 27; i++) {
+      imageList.add(AssetImage('assets/car/$i.jpeg'));
       //* To precache images so that when required they are loaded faster.
-      await precacheImage(AssetImage('assets/car/$i.jpg'), context);
+      await precacheImage(AssetImage('assets/car/$i.jpeg'), context);
     }
     setState(() {
       imagePrecached = true;
