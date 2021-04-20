@@ -5,7 +5,6 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
           margin: EdgeInsets.all(10),
         child: Column(
@@ -13,7 +12,6 @@ class Profile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Container(
-
                 height: 50,
                 width: double.infinity,
                 child: Row(
@@ -33,6 +31,7 @@ class Profile extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20,),
+
             Center(
               child: SizedBox(
                 height: 110,
@@ -64,7 +63,6 @@ class Profile extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(height: 20,),
             ProfileMenu(
               text: "My Account",
