@@ -1,3 +1,4 @@
+import 'package:dapp/NavBar_Components/More_Products.dart';
 import 'package:dapp/Screens/BottamNav.dart';
 import 'package:dapp/Screens/Recommend.dart';
 import 'package:flutter/material.dart';
@@ -133,7 +134,9 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   color: PrimaryColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductCard()));
+                  },
                   child: Text(
                     "More",
                     style: TextStyle(color: Colors.white),
