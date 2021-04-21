@@ -123,14 +123,14 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             left: DefaultPadding / 2),
                         child: Text(
-                          "Recommended",
+                          "Categorys",
                           style: TextStyle(fontSize: 20, fontWeight: FontWeight
                               .bold),
                         ),
                       ),
                     ],
                   ),
-                ), SizedBox(width: 105,),
+                ), SizedBox(width: 165,),
                 FlatButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

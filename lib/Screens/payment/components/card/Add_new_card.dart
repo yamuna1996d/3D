@@ -170,33 +170,7 @@ class _NewCardState extends State<NewCard> {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Colors.red,
-                          Colors.blue,
-                          Colors.purple[700],
-                          Colors.green[700],
-                          Colors.lightBlueAccent
-                        ]
-                            .map((c) => InkWell(
-                          onTap: () {
-                            setState(() {
-                              active = c;
-                            });
-                          },
-                          child: Transform.scale(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ColorOption(c),
-                              ),
-                              scale: active == c ? 1.2 : 1),
-                        ))
-                            .toList(),
-                      ),
-                    ),
+                    SizedBox(height: 5,),
                     Container(
                       padding: EdgeInsets.all(16.0),
                       height: 250,
@@ -206,7 +180,10 @@ class _NewCardState extends State<NewCard> {
                           boxShadow: shadow,
                           borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(10),
-                              bottomLeft: Radius.circular(10))),
+                              bottomLeft: Radius.circular(10),
+                              topLeft: Radius.circular(10),
+                              topRight: Radius.circular(10)
+                          )),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
