@@ -1,8 +1,8 @@
+import 'package:dapp/Screens/payment/components/card/Credit.dart';
 import 'package:dapp/Screens/payment/detail_card.dart';
 import 'package:dapp/models/credit_card.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
-import 'package:sliding_sheet/sliding_sheet.dart';
 
 import '../../../../constraints.dart';
 import 'detail_header.dart';
@@ -22,6 +22,28 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(
+            Icons.arrow_back,
+            color: PrimaryColor,
+            size: SizeConfig.defaultHeight * 4,
+          ),
+        ),
+        // actions: [
+        //   Padding(
+        //     padding: EdgeInsets.only(right: SizeConfig.defaultWidth * 2),
+        //     child: Icon(
+        //       Icons.share,
+        //       color: Colors.white,
+        //       size: SizeConfig.defaultHeight * 4,
+        //     ),
+        //   )
+        // ],
+      ),
       body:
             Stack(
               alignment: Alignment.topCenter,
@@ -46,64 +68,53 @@ class _DetailPageState extends State<DetailPage> {
                           child: Opacity(opacity: value, child: child),
                         ),
                     child:
-                    DetailCard(sheetProgress: sheetProgress, card: widget.card)
+                    DetailCard(sheetProgress: sheetProgress, card: widget.card),
                 ),
-
+                _buildBottomSheet(),
               ]
       ),
     );
   }
+  _buildBottomSheet() => PlayAnimation(
+    tween: Tween(begin: SizeConfig.defaultHeight , end: 0.0),
+    curve: Curves.easeOut,
+    duration: Duration(milliseconds: 200),
+    builder: (context, child, value) => Transform.translate(
+      offset: Offset(0, value),
+      child: child,
+    ),
+    child: Padding(
+      padding: const EdgeInsets.only(top: 440),
+      child: InkWell(
+        onTap: () => Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => Crid())),
+        child: Container(
+          height: 50,
+          width: MediaQuery.of(context).size.width / 1.9,
+          decoration: BoxDecoration(
+              color: PrimaryColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(0, 0, 0, 0.16),
+                  offset: Offset(0, 5),
+                  blurRadius: 10.0,
+                )
+              ],
+              borderRadius: BorderRadius.circular(9.0)),
+          child: Center(
+            child: Text("Select This Card",
+                style: const TextStyle(
+                    color: const Color(0xfffefefe),
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 20.0)),
+          ),
+        ),
+      )
+    ),
+
+
+  );
 }
-//   _buildBottomSheet() => PlayAnimation(
-//         tween: Tween(begin: SizeConfig.defaultHeight * 30, end: 0.0),
-//         curve: Curves.easeOut,
-//         duration: Duration(milliseconds: 200),
-//         builder: (context, child, value) => Transform.translate(
-//           offset: Offset(0, value),
-//           child: child,
-//         ),
-//         child: Align(
-//           alignment: Alignment.bottomCenter,
-//           child: SlidingSheet(
-//               color: sheetColor,
-//               cornerRadius: SizeConfig.defaultWidth * 2.5,
-//               snapSpec: SnapSpec(
-//                   snap: true,
-//                   snappings: [0.3, 0.6, 1],
-//                   positioning: SnapPositioning.relativeToAvailableSpace),
-//               listener: (state) => setState(() {
-//                     sheetProgress = ((state.extent - 0.3) / 0.65);
-//                   }),
-//               headerBuilder: (context, state) {
-//                 return Container(
-//                   height: SizeConfig.defaultHeight * 7,
-//                   width: double.infinity,
-//                   color: sheetColor,
-//                   alignment: Alignment.centerLeft,
-//                   child: Padding(
-//                     padding: EdgeInsets.symmetric(
-//                         horizontal: SizeConfig.defaultWidth * 2),
-//                     child: Text(
-//                       "Today",
-//                       style: Theme.of(context).textTheme.headline6.copyWith(
-//                           color: Colors.white, fontWeight: FontWeight.bold),
-//                     ),
-//                   ),
-//                 );
-//               },
-//               builder: (context, state) {
-//                 return Container(
-//                   color: sheetColor,
-//                   child: ListView.builder(
-//                       itemCount: transactions.length,
-//                       shrinkWrap: true,
-//                       physics: NeverScrollableScrollPhysics(),
-//                       itemBuilder: (context, index) {
-//                         return TransactionSummary(
-//                             transaction: transactions[index]);
-//                       }),
-//                 );
-//               }),
-//         ),
-//       );
-// }
+
+

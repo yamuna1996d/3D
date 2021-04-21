@@ -22,10 +22,10 @@ class _WishListViewState extends State<WishListView> {
         Container(
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color:PrimaryColor.withOpacity(0.09),
+            color:PrimaryColor.withOpacity(0.02),
             borderRadius: BorderRadius.circular(20)
         ),
-        height: 150,
+        //height: 150,
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -53,15 +53,13 @@ class _WishListViewState extends State<WishListView> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
-
-
                     children: [
                       Text(widget.product.name,
                       textAlign: TextAlign.right,
                         style: TextStyle(
 
                             fontWeight: FontWeight.bold,
-                            fontSize: 20
+                            fontSize:20
                         ),),
                       SizedBox(height: 10,),
                       Text('\₹${widget.product.price}',style: TextStyle(
@@ -72,7 +70,7 @@ class _WishListViewState extends State<WishListView> {
                       MaterialButton(
                           height: 30,
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(color: Colors.black),
+                              side: BorderSide(color: PrimaryColor),
                               borderRadius: BorderRadius.circular(30)
                           ),
                           child: Text("Move to Bag",
