@@ -1,3 +1,4 @@
+import 'package:dapp/Screens/MyBag.dart';
 import 'package:flutter/material.dart';
 
 import '../constraints.dart';
@@ -78,7 +79,9 @@ class _WishListViewState extends State<WishListView> {
                             style: TextStyle(
                                 fontSize: 13
                             ),),
-                          onPressed:(){})
+                          onPressed:(){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckOutPage()));
+                          })
                     ],
                   ),
                 ),

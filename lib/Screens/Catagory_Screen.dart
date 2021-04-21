@@ -1,3 +1,4 @@
+import 'package:dapp/NavBar_Components/More_Products.dart';
 import 'package:dapp/models/Category_model.dart';
 import 'package:flutter/material.dart';
 
@@ -94,15 +95,20 @@ class _CategoryScreenState extends State<CategoryScreen> {
                             color: PrimaryColor.withOpacity(0.04),
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(
-                                child: Text(
-                                    "${categories[_selectedCat].subCat[index].title}"),
-                              ),
-                              Icon(Icons.chevron_right),
-                            ],
+                          child: GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductCard()));
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                      "${categories[_selectedCat].subCat[index].title}"),
+                                ),
+                                Icon(Icons.chevron_right),
+                              ],
+                            ),
                           ),
                         );
                       },
