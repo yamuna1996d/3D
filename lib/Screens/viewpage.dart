@@ -1,6 +1,6 @@
 import 'package:dapp/NavBar_Components/whishlist_products.dart';
 import 'package:dapp/Screens/Catagory_Screen.dart';
-import 'package:dapp/Screens/Details.dart';
+import 'package:dapp/components/IteamCard.dart';
 import 'package:dapp/Screens/MyBag.dart';
 import 'package:dapp/components/glitch.dart';
 import 'package:dapp/constraints.dart';
@@ -156,14 +156,14 @@ class _DemoPageState extends State<DemoPage> {
                           minRating: 1,
                           direction: Axis.horizontal,
                           allowHalfRating: true,
-                          itemSize: 13,
+                          itemSize: 20,
                           itemCount: 5,
                           itemPadding: EdgeInsets.symmetric(horizontal: 1),
                           itemBuilder: (context, _) => Icon(
                             Icons.star,
                             color: Colors.amber,
                           ),
-                          unratedColor: Colors.grey,
+                          unratedColor: Colors.white,
                           onRatingUpdate: (rating) {
                             //print(rating);
                           },
@@ -251,12 +251,12 @@ class _DemoPageState extends State<DemoPage> {
             //   ),
             // ),
             Padding(
-              padding: const EdgeInsets.only(top: 41),
+              padding: const EdgeInsets.only(top: 20,),
               child: Row(
                 children: <Widget>[
                   SizedBox(
                     width: size.width / 2,
-                    height: 69,
+                    height: 60,
                     child: FlatButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(

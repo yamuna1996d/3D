@@ -1,4 +1,4 @@
-import 'package:dapp/Screens/Details.dart';
+import 'package:dapp/components/IteamCard.dart';
 import 'package:dapp/Screens/viewpage.dart';
 import 'package:flutter/material.dart';
 import '../constraints.dart';
