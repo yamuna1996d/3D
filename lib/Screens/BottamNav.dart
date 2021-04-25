@@ -1,6 +1,7 @@
 import 'package:dapp/NavBar_Components/More_Products.dart';
 import 'package:dapp/NavBar_Components/Notifications.dart';
 import 'package:dapp/NavBar_Components/User_profile.dart';
+import 'package:dapp/components/EcomorServ.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -69,6 +70,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                               color: currentIndex == 2 ? PrimaryColor : Colors.grey.shade400,
                             ),
                             onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>EcomorServ()));
                               setBottomBarIndex(2);
                             }),
                         IconButton(

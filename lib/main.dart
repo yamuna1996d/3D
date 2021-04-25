@@ -1,4 +1,5 @@
 import 'package:dapp/Screens/Products.dart';
+import 'package:dapp/Screens/SelectLocation.dart';
 import 'package:flutter/material.dart';
 
 import 'constraints.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: TextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: SelectLocation(),
     );
   }
 }
