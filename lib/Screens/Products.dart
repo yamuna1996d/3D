@@ -114,7 +114,6 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-
                 Container(
                   height: 24,
                   child: Stack(
@@ -123,14 +122,14 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             left: DefaultPadding / 2),
                         child: Text(
-                          "Categorys",
+                          "Categories",
                           style: TextStyle(fontSize: 20, fontWeight: FontWeight
                               .bold),
                         ),
                       ),
                     ],
                   ),
-                ), SizedBox(width: 165,),
+                ), SizedBox(width: 158,),
                 FlatButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

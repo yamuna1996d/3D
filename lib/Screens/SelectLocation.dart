@@ -1,8 +1,13 @@
-import 'dart:convert';
-import 'package:autocomplete_textfield/autocomplete_textfield.dart';
-import 'package:dapp/constraints.dart';
-import 'package:flutter/material.dart';
 
+import 'dart:convert';
+ import 'package:autocomplete_textfield/autocomplete_textfield.dart';
+import 'package:dapp/Screens/Products.dart';
+import 'package:dapp/components/EcomorServ.dart';
+import 'package:dapp/constraints.dart';
+import 'package:dapp/helpers/Config.dart';
+ import 'package:flutter/material.dart';
+// import 'package:flutter_app/helpers/Config.dart';
+//import 'package:flutter_app/screens/Registration.dart';
 import 'package:http/http.dart' as http;
 
 
@@ -131,7 +136,7 @@ class _SelectLocationState extends State<SelectLocation> {
                         width: double.infinity,
                         height: 50,
                         child: RaisedButton(
-                          color: PrimaryColor,
+                         // color: HexColor("#5D8A00"),
                           onPressed: (){
                             if(selectedDistrict =="SELECT DISTRICT"){
                               showDialog(context: context,builder: (BuildContext context){
@@ -172,13 +177,15 @@ class _SelectLocationState extends State<SelectLocation> {
                               });
 
                             }else{
-                             // Navigator.pushNamed(context, "/registration",arguments: RegistrationArguments(district: selectedDistrict,chapter : selectedLocality,pincode: args.pincode,po: args.po));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>EcomorServ()));
+                              //Navigator.pushNamed(context, "/registration",arguments: RegistrationArguments(district: selectedDistrict,chapter : selectedLocality,pincode: args.pincode,po: args.po));
                             }
 
                           },
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(30)),
                           ),
+                          color: PrimaryColor,
                           child: Text("CONTINUE",style: TextStyle(color: Colors.white),),
                         ),
                       ),
@@ -304,10 +311,9 @@ class _SelectLocationState extends State<SelectLocation> {
     setState(() {
       progress = true;
     });
+    // var uri = "http://65.0.174.90:5000/api/v1/localities?district=";
     var url = Uri.parse("http://65.0.174.90:5000/api/v1/localities?district=" + selectedDistrict);
-    http.Response response = await http.get(url
-//          Config.BASE_URL + "/localities?district="+ selectedDistrict
-    );
+    http.Response response = await http.get(url);
     setState(() {
       localities = jsonDecode(response.body);
       progress = false;
