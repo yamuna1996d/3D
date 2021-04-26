@@ -2,6 +2,8 @@ import 'package:dapp/Screens/MyBag.dart';
 import 'package:flutter/material.dart';
 
 import '../constraints.dart';
+import '../constraints.dart';
+import '../constraints.dart';
 import '../models/product.dart';
 class WishListView extends StatefulWidget {
   final Product product;
@@ -20,12 +22,12 @@ class _WishListViewState extends State<WishListView> {
       children: [
 
         Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.only(left: 10,right: 10,bottom: 2,top: 7),
         decoration: BoxDecoration(
-            color:PrimaryColor.withOpacity(0.09),
+            color:PrimaryColor.withOpacity(0.02),
             borderRadius: BorderRadius.circular(20)
         ),
-        height: 150,
+       // height: 130,
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -51,37 +53,42 @@ class _WishListViewState extends State<WishListView> {
 
                 child: Flexible(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
 
 
                     children: [
                       Text(widget.product.name,
-                      textAlign: TextAlign.right,
-                        style: TextStyle(
+                        textAlign: TextAlign.right,
+                          style: TextStyle(
 
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20
-                        ),),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15
+                          ),),
+
                       SizedBox(height: 10,),
                       Text('\₹${widget.product.price}',style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15
                       ),),
                       SizedBox(height: 10,),
-                      MaterialButton(
-                          height: 30,
-                          shape: RoundedRectangleBorder(
-                              side: BorderSide(color: Colors.black),
-                              borderRadius: BorderRadius.circular(30)
-                          ),
-                          child: Text("Move to Bag",
-                            style: TextStyle(
-                                fontSize: 13
-                            ),),
-                          onPressed:(){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckOutPage()));
-                          })
+                      SizedBox(height: 30,
+                      width: 120,
+                        child: MaterialButton(
+
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(color: PrimaryColor),
+                                borderRadius: BorderRadius.circular(30)
+                            ),
+                            child: Text("Move to Bag",
+                              style: TextStyle(
+                                  fontSize: 13
+                              ),),
+                            onPressed:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckOutPage()));
+                            }),
+                      ),
+
                     ],
                   ),
                 ),

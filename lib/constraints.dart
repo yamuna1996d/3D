@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-const PrimaryColor = Color(0xFF308614);
+const PrimaryColor = Color(0xFFFF9900);
 const TextColor = Color(0xFF3C4046);
 const backgroundColor = Color(0xFFF9F8FD);
 const Color darkGrey = Color(0xff202020);

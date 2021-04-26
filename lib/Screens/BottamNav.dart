@@ -42,7 +42,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                       children: [
                         IconButton(
                           icon: Icon(
-                            Icons.person,
+                            Icons.settings,
                             color: currentIndex == 0 ? PrimaryColor : Colors.grey.shade400,
                           ),
                           onPressed: () {
