@@ -444,7 +444,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                               ],
                               borderRadius: BorderRadius.circular(9.0)),
                           child: Center(
-                            child: Text("Pay Now",
+                            child: Text("Proceed",
                                 style: const TextStyle(
                                     color: const Color(0xfffefefe),
                                     fontWeight: FontWeight.w600,

@@ -45,6 +45,7 @@ class _PasswordChangeState extends State<PasswordChange> {
         title: Text("Change Password",style: TextStyle(
           fontSize: 19,
           color: Colors.black
+
         ),),
         elevation: 0.2,
       ),

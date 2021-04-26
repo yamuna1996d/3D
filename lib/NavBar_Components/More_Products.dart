@@ -135,7 +135,7 @@ class _ProductCardState extends State<ProductCard> {
                           SizedBox(
                             height: 20,
                             child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 IntrinsicHeight(
                                   child: Container(

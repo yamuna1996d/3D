@@ -1,3 +1,5 @@
+import 'package:dapp/NavBar_Components/user_profile/User_Account.dart';
+import 'package:dapp/Screens/Register_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../constraints.dart';
@@ -77,11 +79,11 @@ class Profile extends StatelessWidget {
               icon: "assets/icons/bell.svg",
               press: () {},
             ),
-            ProfileMenu(
-              text: "Settings",
-              icon: "assets/icons/settings.svg",
-              press: () {},
-            ),
+            // ProfileMenu(
+            //   text: "Settings",
+            //   icon: "assets/icons/settings.svg",
+            //   press: () {},
+            // ),
             ProfileMenu(
               text: "Help Center",
               icon: "assets/icons/social-care.svg",
@@ -90,7 +92,9 @@ class Profile extends StatelessWidget {
             ProfileMenu(
               text: "Log Out",
               icon: 'assets/icons/exit.svg',
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen()));
+              },
             ),
           ],
         )
@@ -118,7 +122,7 @@ class ProfileMenu extends StatelessWidget {
       child: FlatButton(
         padding: EdgeInsets.all(20),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        color: Colors.white54,
+        color: PrimaryColor.withOpacity(0.04),
         onPressed: press,
         child: Row(
           children: [
