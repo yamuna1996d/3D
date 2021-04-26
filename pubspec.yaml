@@ -44,6 +44,8 @@ dependencies:
   simple_animations: ^2.2.1
   autocomplete_textfield: ^1.7.3
   google_fonts: ^2.0.0
+  flutter_custom_clippers: ^1.1.2
+  animated_text_kit: ^4.2.0
   badges: ^1.1.6
   http: ^0.13.1
   flutter_custom_clippers: ^1.1.2

@@ -39,11 +39,13 @@ class _PasswordChangeState extends State<PasswordChange> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: backgroundColor,
-        // leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.black,), onPressed: (){
-        //   Navigator.pop(context);
-        // }),
+        leading: IconButton(icon: Icon(Icons.arrow_back, color: PrimaryColor,), onPressed: (){
+          Navigator.pop(context);
+        }),
         title: Text("Change Password",style: TextStyle(
-          fontSize: 19
+          fontSize: 19,
+          color: Colors.black
+
         ),),
         elevation: 0.2,
       ),

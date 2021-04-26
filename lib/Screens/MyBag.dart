@@ -73,12 +73,12 @@ class _CheckOutPageState extends State<CheckOutPage> {
         elevation: 0.0,
         iconTheme: IconThemeData(color: PrimaryColor),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.wallet_travel),
-            // onPressed: () => Navigator.of(context).push(
-            //     MaterialPageRoute(builder: (_) => UnpaidPage())
-            //     ),
-          )
+          // IconButton(
+          //   icon: Icon(Icons.wallet_travel),
+          //   onPressed: () => Navigator.of(context).push(
+          //       MaterialPageRoute(builder: (_) => OrderSuccess())
+          //       ),
+          // )
         ],
         title: Text(
           'Checkout',

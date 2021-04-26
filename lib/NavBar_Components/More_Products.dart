@@ -6,42 +6,49 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
+  @override
+  _ProductCardState createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
   final List<Product> products = [
   Product(
       'assets/car/1.jpeg',
-      'Skullcandy headset L325',
+      'Skullcandy camera pro',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
       102.99),
   Product(
       'assets/images/e.jpg',
-      'Skullcandy headset X25',
+      'Skullcandy headset',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
       55.99),
   Product(
       'assets/images/f.jpg',
-      'Blackzy PRO hedphones M003',
+      'Blackzy PRO ',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
       152.99),
     Product(
         'assets/images/b.jpg',
-        'Skullcandy headset L325',
+        'Skullcandy',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
         102.99),
     Product(
         'assets/images/c.jpg',
-        'Skullcandy headset X25',
+        'Skullcandy ',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
         55.99),
     Product(
         'assets/images/d.png',
-        'Blackzy PRO hedphones M003',
+        'Blackzy PRO',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor consequat id porta nibh. Orci porta non pulvinar neque laoreet suspendisse. Id nibh tortor id aliquet. Dui sapien eget mi proin. Viverra vitae congue eu consequat ac felis donec. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Vulputate mi sit amet mauris commodo quis imperdiet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Sit amet cursus sit amet dictum sit amet justo. Mattis pellentesque id nibh tortor. Sed blandit libero volutpat sed cras ornare arcu dui. Fermentum et sollicitudin ac orci phasellus. Ipsum nunc aliquet bibendum enim facilisis gravida. Viverra suspendisse potenti nullam ac tortor. Dapibus ultrices in iaculis nunc sed. Nisi porta lorem mollis aliquam ut porttitor leo a. Phasellus egestas tellus rutrum tellus pellentesque. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Eros in cursus turpis massa. Eget mauris pharetra et ultrices neque.',
         152.99),
 ];
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    int activeMenu = 0;
     return Scaffold(
       body: Container(
         child: Padding(
@@ -55,7 +62,7 @@ class ProductCard extends StatelessWidget {
                          height: 225.0,
                           decoration: BoxDecoration(
                                     gradient:LinearGradient(
-                                    colors:[PrimaryColor,Colors.green[300]],)
+                                    colors:[PrimaryColor,Colors.purple],)
                 )
                       ),
                     ),
@@ -149,38 +156,72 @@ class ProductCard extends StatelessWidget {
                             ),
                           ),
                           Flexible(
-                              child: Container(
-                                padding: EdgeInsets.only(top: 16.0,left: 6,right: 6),
-                                child: StaggeredGridView.countBuilder(
-                                  padding: EdgeInsets.zero,
-                                  crossAxisCount: 4,
-                                  itemCount: products.length,
-                                  itemBuilder: (BuildContext context, int index) => new ClipRRect(
-                                    // borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.of(context).push(
-                                          MaterialPageRoute(builder: (_) => DemoPage())),
-                                      child:
-                                          Container(
-                                            padding: EdgeInsets.all(10),
-                                              decoration: BoxDecoration(
-                                                color: Colors.white
-                                              ),
-                                              child:Image.asset(products[index].image),
-                                              // Hero(
-                                              //     tag: products[index].image,
-                                              //     child: Image.asset(products[index].image)
-                                              ),
-
-
-                                    ),
-                                  ),
-                                  staggeredTileBuilder: (int index) =>
-                                  new StaggeredTile.count(2, index.isEven ? 3 : 2),
-                                  mainAxisSpacing: 4.0,
-                                  crossAxisSpacing: 6.0,
+                                child: ListView(
+                                  children: <Widget>[
+                                    SizedBox(height: 10,),
+                                    Wrap(
+                                      children: List.generate(products.length, (index){
+                                        return InkWell(
+                                          // onTap: (){
+                                          //   Navigator.push(context, MaterialPageRoute(builder: (_) => ProductDetailPage(id: dataItems[index]['id'].toString(),
+                                          //     name: dataItems[index]['name'],
+                                          //     code: dataItems[index]['code'],
+                                          //     img: dataItems[index]['img'],
+                                          //     price: dataItems[index]['price'].toString(),
+                                          //     promotionPrice: dataItems[index]['promotionPrice'].toString(),
+                                          //
+                                          //   ),));
+                                          // },
+                                          onTap: (){
+                                            Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                                                DemoPage()
+                                            ));
+                                          },
+                                          child: Container(
+                                            width:175 ,
+                                            child: Card(
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(15.0),
+                                                ),
+                                                elevation: 1,
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    Hero(
+                                                      tag: products[index].name,
+                                                      child: Container(
+                                                        width: (size.width-20)/2,
+                                                        height: (size.width-16)/2,
+                                                        decoration: BoxDecoration(
+                                                            image: DecorationImage(image: new AssetImage(products[index].image),
+                                                                fit: BoxFit.contain)
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    SizedBox(height: 15,),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 15),
+                                                      child: Text(products[index].name,style: TextStyle(
+                                                          fontSize: 16
+                                                      ),),
+                                                    ),
+                                                    SizedBox(height: 10,),
+                                                    Padding(
+                                                      padding: const EdgeInsets.only(left: 15),
+                                                      child: Text("₹ " + products[index].price.toString(),style: TextStyle(
+                                                          fontSize: 16
+                                                      ),),
+                                                    ),
+                                                    SizedBox(height: 10,),
+                                                  ],
+                                                )
+                                            ),
+                                          ),
+                                        );
+                                      }),
+                                    )
+                                  ],
                                 ),
-                              ),
 
                             ),
                         ],

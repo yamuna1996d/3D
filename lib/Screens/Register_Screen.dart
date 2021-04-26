@@ -66,7 +66,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius: BorderRadius.circular(50)
                       ),
                       onPressed:(){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                        
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLocation()));
+
                       },
                       child: Text("Login",style: TextStyle(color:backgroundColor,fontSize: 20),),),
                   ),
