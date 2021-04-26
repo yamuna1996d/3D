@@ -1,4 +1,5 @@
 import 'package:dapp/Screens/Products.dart';
+import 'package:dapp/Screens/Register_Screen.dart';
 import 'package:dapp/Screens/SelectLocation.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: TextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SelectLocation(),
+      home: RegisterScreen(),
     );
   }
 }

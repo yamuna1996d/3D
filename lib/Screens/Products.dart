@@ -22,7 +22,10 @@ class HomeScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(top: 30,left: 280),
               decoration: BoxDecoration(
-                color: PrimaryColor
+                  gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: [PrimaryColor, Colors.deepPurple])
               ),
               height: 60,
               width: double.infinity,
@@ -43,7 +46,10 @@ class HomeScreen extends StatelessWidget {
                       bottom: 25+ DefaultPadding,
                     ),
                     decoration: BoxDecoration(
-                      color: PrimaryColor,
+                        gradient: LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [PrimaryColor, Colors.deepPurple]),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(36),
                         bottomRight: Radius.circular(36),
@@ -80,13 +86,13 @@ class HomeScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              offset: Offset(0, 10),
-                              blurRadius: 50,
-                              color: PrimaryColor.withOpacity(0.23),
-                            ),
-                          ],
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     offset: Offset(0, 10),
+                          //     blurRadius: 50,
+                          //     color: PrimaryColor.withOpacity(0.23),
+                          //   ),
+                          // ],
                         ),
                         child: Row(
                           children: <Widget>[
@@ -134,7 +140,7 @@ class HomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  color: PrimaryColor,
+                  color: Colors.deepPurple,
                   onPressed: () {
                     Navigator.push(
                       context,

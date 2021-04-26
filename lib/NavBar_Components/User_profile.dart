@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../constraints.dart';
+import 'user_profile/User_Account.dart';
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,9 @@ class Profile extends StatelessWidget {
             ProfileMenu(
               text: "My Account",
               icon: "assets/icons/users.svg",
-              press: () => {},
+              press: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>UserAccount()))
+              },
             ),
             ProfileMenu(
               text: "Notifications",

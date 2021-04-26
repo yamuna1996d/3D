@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-const PrimaryColor = Color(0xFF308614);
+const PrimaryColor = Color(0xFF6F35A5);
 const TextColor = Color(0xFF3C4046);
 const backgroundColor = Color(0xFFF9F8FD);
 const Color darkGrey = Color(0xff202020);
@@ -87,4 +87,17 @@ class DrawCircle extends CustomPainter {
   bool shouldRepaint(CustomPainter oldDelegate) {
     return false;
   }
+}
+// Get the proportionate height as per screen size
+double getProportionateScreenHeight(double inputHeight) {
+  double screenHeight = SizeConfig.screenHeight;
+  // 812 is the layout height that designer use
+  return (inputHeight / 812.0) * screenHeight;
+}
+
+// Get the proportionate height as per screen size
+double getProportionateScreenWidth(double inputWidth) {
+  double screenWidth = SizeConfig.screenWidth;
+  // 375 is the layout width that designer use
+  return (inputWidth / 375.0) * screenWidth;
 }

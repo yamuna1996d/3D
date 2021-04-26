@@ -50,7 +50,7 @@ class EcomorServ extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 240,left: 10,),
+                        padding: const EdgeInsets.only(top: 240,left: 6),
                         child: Column(
                           children: [
                             Container(

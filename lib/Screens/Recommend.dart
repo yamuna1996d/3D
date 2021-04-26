@@ -100,13 +100,13 @@ class RecomendCard extends StatelessWidget {
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 50,
-                    color: PrimaryColor.withOpacity(0.23),
-                  ),
-                ],
+                // boxShadow: [
+                //   BoxShadow(
+                //     offset: Offset(0, 10),
+                //     blurRadius: 50,
+                //     color: PrimaryColor.withOpacity(0.23),
+                //   ),
+                // ],
               ),
               child: Row(
                 children: <Widget>[
@@ -119,7 +119,7 @@ class RecomendCard extends StatelessWidget {
                         TextSpan(
                           text: "$country".toUpperCase(),
                           style: TextStyle(
-                            color: PrimaryColor.withOpacity(0.5),
+                            color: Colors.black,
                           ),
                         ),
                       ],
@@ -131,7 +131,7 @@ class RecomendCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .button
-                        .copyWith(color: PrimaryColor),
+                        .copyWith(color:Colors.black,),
                   )
                 ],
               ),

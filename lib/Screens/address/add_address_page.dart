@@ -1,3 +1,4 @@
+import 'package:dapp/Screens/OrderSuccessScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -454,7 +455,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         onTap: (){
                           final FormState form = _formGlobalKey.currentState;
                           if(form.validate()){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>AddAddressForm()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderSuccess()));
                           }
 
                         },
