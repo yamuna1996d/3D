@@ -178,6 +178,7 @@ class _ProductCardState extends State<ProductCard> {
                                             ));
                                           },
                                           child: Container(
+
                                             width:175 ,
                                             child: Card(
                                                 shape: RoundedRectangleBorder(

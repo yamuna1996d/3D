@@ -1,4 +1,5 @@
 import 'package:dapp/Screens/Products.dart';
+import 'package:dapp/Services/List_of_Services.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -119,7 +120,9 @@ class EcomorServ extends StatelessWidget {
 
                             Container(
                                 child: FlatButton(
-                                  onPressed: null,
+                                  onPressed:(){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ServiceList()));
+                                  },
                                   child: Text('Go', style: TextStyle(
                                       color: PrimaryColor
                                   )

@@ -8,7 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.1"
-
   async:
     dependency: transitive
     description:
