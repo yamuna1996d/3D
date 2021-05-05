@@ -45,6 +45,7 @@ class Notifications extends StatelessWidget {
                                 height: 110,
                                 width: 110,
                                 child: Stack(children: <Widget>[
+
                                   Positioned(
                                     top: 8.0,
                                     left: 10.0,
@@ -119,7 +120,7 @@ class Notifications extends StatelessWidget {
                                         height: 80,
                                         width: 80,
                                         child: Image.asset(
-                                            'assets/images/b.jpg')),
+                                            "assets/images/b.jpg")),
                                   )
                                 ]),
                               ),

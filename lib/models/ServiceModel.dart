@@ -10,20 +10,20 @@ class Services{
 
 List<Services> services=[
   Services(
-      id: 1,
-      sname: "Photography",
-      image:"https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/dslr-camera/desktop/DSLR_P1_900x420.jpg.img.jpg"
+    id: 1,
+    sname: "Photography",
+    image:"https://www.adobe.com/content/dam/cc/us/en/creative-cloud/photography/discover/dslr-camera/desktop/DSLR_P1_900x420.jpg.img.jpg"
   ),
   Services(
-      id: 2,
-      sname: "Salon Service",
-      image: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/05/salon-lockdown-1590854316.jpg"
+    id: 2,
+    sname: "Salon Service",
+    image: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/05/salon-lockdown-1590854316.jpg"
 
   ),
   Services(
-      id: 3,
-      sname: "Flower",
-      image: "https://image.shutterstock.com/image-photo/street-flower-shop-colourful-flowers-260nw-366541223.jpg"
+    id: 3,
+    sname: "Flower",
+    image: "https://image.shutterstock.com/image-photo/street-flower-shop-colourful-flowers-260nw-366541223.jpg"
   ),
   Services(
       id: 4,

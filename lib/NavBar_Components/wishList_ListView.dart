@@ -2,6 +2,8 @@ import 'package:dapp/Screens/MyBag.dart';
 import 'package:flutter/material.dart';
 
 import '../constraints.dart';
+import '../constraints.dart';
+import '../constraints.dart';
 import '../models/product.dart';
 class WishListView extends StatefulWidget {
   final Product product;
@@ -20,7 +22,7 @@ class _WishListViewState extends State<WishListView> {
       children: [
 
         Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.only(left: 10,right: 10,bottom: 2,top: 7),
         decoration: BoxDecoration(
             color:PrimaryColor.withOpacity(0.02),
             borderRadius: BorderRadius.circular(20)
@@ -51,22 +53,31 @@ class _WishListViewState extends State<WishListView> {
 
                 child: Flexible(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.end,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(widget.product.name,
-                      textAlign: TextAlign.right,
-                        style: TextStyle(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5,right: 45),
+                        child: Wrap(
+                        //  runAlignment: WrapAlignment.start,
+                          children: [
+                            Text(widget.product.name,
+                            textAlign: TextAlign.right,
+                              style: TextStyle(
 
-                            fontWeight: FontWeight.bold,
-                            fontSize:20
-                        ),),
+                                fontWeight: FontWeight.bold,
+                                fontSize:20
+                            ),),
+                  ]
+                        ),
+                      ),
                       SizedBox(height: 10,),
                       Text('\₹${widget.product.price}',style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15
                       ),),
                       SizedBox(height: 10,),
+
                       MaterialButton(
                           height: 30,
                           shape: RoundedRectangleBorder(

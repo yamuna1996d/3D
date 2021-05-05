@@ -9,38 +9,38 @@ class ServiceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backgroundColor,
-        appBar: AppBar(
-          backgroundColor:backgroundColor,
-          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),
-              onPressed:(){
-                Navigator.pop(context);
-              }),
-          elevation: 0,
+      backgroundColor: backgroundColor,
+      appBar: AppBar(
+        backgroundColor:backgroundColor,
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),
+            onPressed:(){
+          Navigator.pop(context);
+            }),
+        elevation: 0,
 
-          title: Text("Our Services",style: TextStyle(
-              color: Colors.black
-          ),),
+        title: Text("Our Services",style: TextStyle(
+          color: Colors.black
+        ),),
+      ),
+      body:Container(
+        margin: EdgeInsets.all(10),
+        child: Column(
+          
+          children: [
+            //SizedBox(height: 10,),
+            Expanded(child: GridView.builder(
+              itemCount: services.length,
+              gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
+                childAspectRatio: 0.75,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              itemBuilder:(context, index) => ServiceCard(services: services[index],),
+            )
+            )
+          ],
         ),
-        body:Container(
-          margin: EdgeInsets.all(10),
-          child: Column(
-
-            children: [
-              //SizedBox(height: 10,),
-              Expanded(child: GridView.builder(
-                itemCount: services.length,
-                gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
-                  childAspectRatio: 0.75,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                ),
-                itemBuilder:(context, index) => ServiceCard(services: services[index],),
-              )
-              )
-            ],
-          ),
-        )
+      )
     );
 
   }
