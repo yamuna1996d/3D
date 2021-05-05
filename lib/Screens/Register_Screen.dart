@@ -1,10 +1,8 @@
-import 'package:dapp/Screens/Products.dart';
 import 'package:dapp/Screens/SelectLocation.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
 import '../components/EcomorServ.dart';
 import 'Products.dart';
 
@@ -28,36 +26,34 @@ class _RegisterScreenState extends State<RegisterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 70,),
+            Padding(
+              padding: EdgeInsets.only(top: 70,left: 60,right: 10),
+              child: SizedBox(
+                height: 50,
+                width: 100,
+                child: DefaultTextStyle(
+                  style: const TextStyle(
+                    color: PrimaryColor,
+                    fontSize: 40.0,
+                  ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      WavyAnimatedText('Welcome'),
 
+                      //WavyAnimatedText(''),
+                    ],
+                    repeatForever: true,
+                    isRepeatingAnimation: true,
+                    onTap: () {
+                      print("Tap Event");
+                    },
+                  ),
+                ),
+              ),
+            ),
 
-           SizedBox(height: 70,),
-             Padding(
-               padding: EdgeInsets.only(top: 70,left: 60,right: 10),
-               child: SizedBox(
-                 height: 50,
-                 width: 100,
-                 child: DefaultTextStyle(
-                   style: const TextStyle(
-                     color: PrimaryColor,
-                     fontSize: 40.0,
-                   ),
-                   child: AnimatedTextKit(
-                     animatedTexts: [
-                       WavyAnimatedText('Welcome'),
-
-                       //WavyAnimatedText(''),
-                     ],
-                     repeatForever: true,
-                     isRepeatingAnimation: true,
-                     onTap: () {
-                       print("Tap Event");
-                     },
-                   ),
-                 ),
-               ),
-             ),
-
-              Padding(padding: EdgeInsets.only(left: 30,right: 25,top: 130),
+            Padding(padding: EdgeInsets.only(left: 30,right: 25,top: 130),
               child: Column(
                 children: [
 
@@ -66,7 +62,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 60,
                     width: 300,
                     child: RaisedButton(
-                         elevation: 0,
+                      elevation: 0,
                       color: PrimaryColor,
                       shape: RoundedRectangleBorder(
 
@@ -79,7 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       },
                       child: Text("Sign In",style: TextStyle(color:backgroundColor,fontSize: 20),),),
                   ),
-                 SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   SizedBox(
                     height: 60,
                     width: 300,
@@ -91,14 +87,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius: BorderRadius.circular(30)
                       ),
                       onPressed:(){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLocation()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLocation()));
                       },
                       child: Text("Sign Up",style: TextStyle(color:PrimaryColor,fontSize: 20),),),
                   ),
                 ],
               ),
 
-              ),
+            ),
 
             // Expanded(
             //   child: Align(
@@ -196,6 +192,5 @@ class BottomWaveClipper extends CustomClipper<Path>{
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
     return false;
   }
-  
-}
 
+}

@@ -34,7 +34,6 @@ class EcomorServ extends StatelessWidget {
               shadowColor: Colors.green,
             ),
           ),
-
         ],
       );
     }
@@ -42,106 +41,110 @@ class EcomorServ extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
+        width: MediaQuery.of(context).size.width,
         child: Stack(
           children: [
             drawCircles(),
             Column(
               children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 240,left: 6),
-                        child: Column(
-                          children: [
-                            Container(
-                              decoration: new BoxDecoration(
-                                color: Colors.white,
-                                boxShadow: shadow,
-                                border: new Border.all(
-                                  color:PrimaryColor,
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                               child: SvgPicture.asset("assets/online.svg",fit: BoxFit.cover,width: 160,),
-                            ),
-                            SizedBox(height: 10,),
-                            Container(
-                              child: Text("Looking for a product...",style: GoogleFonts.caveat(
-                                fontWeight: FontWeight.bold,fontSize: 18
-                              ),),
-                            ),
-                            SizedBox(height: 10,),
-
-                            Container(
-                              decoration: BoxDecoration(
-                                boxShadow: shadow,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                             child: RaisedButton(
-                                onPressed: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
-                                },
-                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-                                textColor: Colors.white,
-                                color: PrimaryColor.withOpacity(0.8),
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Go",
-                                ),
-                              ),
-                            )
-
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 240,left: 20),
-                        child: Column(
-                          children: [
-                            Container(
-                              decoration: new BoxDecoration(
-                                color: Colors.white,
-                                boxShadow: shadow,
-                                border: new Border.all(
-                                  color: PrimaryColor,
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: SvgPicture.asset("assets/photo.svg",fit: BoxFit.cover,width: 160,),
-                            ),
-                            SizedBox(height: 10,),
-                            Container(
-                              child: Text("Looking for a Service...",style: GoogleFonts.caveat(
-                                  fontWeight: FontWeight.bold,fontSize: 18
-                              ),),
-                            ),
-                            SizedBox(height: 10,),
-
-                            Container(
-                                child: FlatButton(
-                                  onPressed:(){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ServiceList()));
-                                  },
-                                  child: Text('Go', style: TextStyle(
-                                      color: PrimaryColor
-                                  )
+                Expanded(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 240,left: 15),
+                          child: Column(
+                            children: [
+                              Container(
+                                decoration: new BoxDecoration(
+                                  color: Colors.white,
+                                  boxShadow: shadow,
+                                  border: new Border.all(
+                                    color:PrimaryColor,
                                   ),
+                                  shape: BoxShape.circle,
+                                ),
+                                 child: SvgPicture.asset("assets/online.svg",fit: BoxFit.cover,width: 150,),
+                              ),
+                              SizedBox(height: 10,),
+                              Container(
+                                child: Text("Looking for a product...",style: GoogleFonts.caveat(
+                                  fontWeight: FontWeight.bold,fontSize: 18
+                                ),),
+                              ),
+                              SizedBox(height: 10,),
+
+                              Container(
+                                decoration: BoxDecoration(
+                                  boxShadow: shadow,
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                               child: RaisedButton(
+                                  onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                                  },
+                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                                   textColor: Colors.white,
-                                  shape: RoundedRectangleBorder(side: BorderSide(
-                                      color: PrimaryColor,
-                                      width: 1,
-                                      style: BorderStyle.solid
-                                  ), borderRadius: BorderRadius.circular(50)),
-                                )
-                            ),
-                          ],
+                                  color: PrimaryColor.withOpacity(0.8),
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Go",
+                                  ),
+                                ),
+                              )
+
+                            ],
+                          ),
                         ),
-                      )
-                    ],
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 240,left: 10),
+                            child: Column(
+                              children: [
+                                Container(
+                                  decoration: new BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: shadow,
+                                    border: new Border.all(
+                                      color: PrimaryColor,
+                                    ),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: SvgPicture.asset("assets/photo.svg",fit: BoxFit.cover,width: 150,),
+                                ),
+                                SizedBox(height: 10,),
+                                Container(
+                                  child: Text("Looking for a Service...",style: GoogleFonts.caveat(
+                                      fontWeight: FontWeight.bold,fontSize: 18
+                                  ),),
+                                ),
+                                SizedBox(height: 10,),
+                                Container(
+                                    child: FlatButton(
+                                      onPressed: (){
+                                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ServiceList()));
+                                      },
+                                      child: Text('Go', style: TextStyle(
+                                          color: PrimaryColor
+                                      )
+                                      ),
+                                      textColor: Colors.white,
+                                      shape: RoundedRectangleBorder(side: BorderSide(
+                                          color: PrimaryColor,
+                                          width: 1,
+                                          style: BorderStyle.solid
+                                      ), borderRadius: BorderRadius.circular(50)),
+                                    )
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-
               ],
             ),
           ],

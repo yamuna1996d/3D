@@ -113,19 +113,6 @@ class Notifications extends StatelessWidget {
                                 height: 110,
                                 width: 110,
                                 child: Stack(children: <Widget>[
-                                  // Positioned(
-                                  //   left: 5.0,
-                                  //   bottom: -10.0,
-                                  //   child: SizedBox(
-                                  //     height: 100,
-                                  //     width: 100,
-                                  //     child: Transform.scale(
-                                  //       scale: 1.2,
-                                  //       child: Image.asset(
-                                  //           "assets/bottom_yello.png"),
-                                  //     ),
-                                  //   ),
-                                  // ),
                                   Positioned(
                                     top: 8.0,
                                     left: 10.0,

@@ -69,6 +69,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                               Icons.bookmark,
                               color: currentIndex == 2 ? PrimaryColor : Colors.grey.shade400,
                             ),
+                            
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>EcomorServ()));
                               setBottomBarIndex(2);

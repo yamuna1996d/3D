@@ -1,3 +1,4 @@
+import 'package:dapp/NavBar_Components/Notifications.dart';
 import 'package:dapp/NavBar_Components/user_profile/User_Account.dart';
 import 'package:dapp/Screens/Register_Screen.dart';
 import 'package:flutter/material.dart';
@@ -82,11 +83,11 @@ class Profile extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Notifications()));
               },
             ),
-            // ProfileMenu(
-            //   text: "Settings",
-            //   icon: "assets/icons/settings.svg",
-            //   press: () {},
-            // ),
+            ProfileMenu(
+              text: "Settings",
+              icon: "assets/icons/settings.svg",
+              press: () {},
+
             ProfileMenu(
               text: "Help Center",
               icon: "assets/icons/social-care.svg",
