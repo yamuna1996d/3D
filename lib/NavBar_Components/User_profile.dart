@@ -3,6 +3,7 @@ import 'package:dapp/Screens/Register_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../constraints.dart';
+import 'Notifications.dart';
 import 'user_profile/User_Account.dart';
 class Profile extends StatelessWidget {
   @override
@@ -77,7 +78,9 @@ class Profile extends StatelessWidget {
             ProfileMenu(
               text: "Notifications",
               icon: "assets/icons/bell.svg",
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Notifications()));
+              },
             ),
             // ProfileMenu(
             //   text: "Settings",

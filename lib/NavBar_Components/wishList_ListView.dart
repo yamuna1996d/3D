@@ -53,16 +53,24 @@ class _WishListViewState extends State<WishListView> {
 
                 child: Flexible(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.end,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(widget.product.name,
-                        textAlign: TextAlign.right,
-                          style: TextStyle(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5,right: 45),
+                        child: Wrap(
+                        //  runAlignment: WrapAlignment.start,
+                          children: [
+                            Text(widget.product.name,
+                            textAlign: TextAlign.right,
+                              style: TextStyle(
 
-                            fontWeight: FontWeight.bold,
-                            fontSize:20
-                        ),),
+                                fontWeight: FontWeight.bold,
+                                fontSize:20
+                            ),),
+                  ]
+                        ),
+                      ),
                       SizedBox(height: 10,),
                       Text('\₹${widget.product.price}',style: TextStyle(
                           fontWeight: FontWeight.bold,

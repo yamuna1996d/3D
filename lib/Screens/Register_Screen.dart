@@ -5,14 +5,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+import '../components/EcomorServ.dart';
+import 'Products.dart';
+
 class RegisterScreen extends StatefulWidget {
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+
   @override
   Widget build(BuildContext context) {
+    var heightOfScreen = MediaQuery.of(context).size.height;
+    var widthOfScreen = MediaQuery.of(context).size.width;
+    //final Size size= MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor:backgroundColor,
 
@@ -22,7 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            
+
            SizedBox(height: 70,),
              Padding(
                padding: EdgeInsets.only(top: 70,left: 60,right: 10),
@@ -66,11 +73,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius: BorderRadius.circular(50)
                       ),
                       onPressed:(){
-                        
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLocation()));
+
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>EcomorServ()));
 
                       },
-                      child: Text("Login",style: TextStyle(color:backgroundColor,fontSize: 20),),),
+                      child: Text("Sign In",style: TextStyle(color:backgroundColor,fontSize: 20),),),
                   ),
                  SizedBox(height: 20,),
                   SizedBox(
@@ -86,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       onPressed:(){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectLocation()));
                       },
-                      child: Text("Register",style: TextStyle(color:PrimaryColor,fontSize: 20),),),
+                      child: Text("Sign Up",style: TextStyle(color:PrimaryColor,fontSize: 20),),),
                   ),
                 ],
               ),
@@ -108,33 +115,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Expanded(
                 child:Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 60),
+
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
                       child: Container(
-                         height:500,
-                        width: 230,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(300),
-
-                            ),
-
-                          boxShadow: [
-                            BoxShadow(color:Colors.black.withOpacity(0.5),
-                            blurRadius: 50,),
-                          ],
-
-                          color: PrimaryColor,
-
-
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 170, top:170 ),
-                      child: Container(
-                        height:90,
-                        width: 190,
+                        height:heightOfScreen *0.12,
+                        width: widthOfScreen*0.50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(200),
@@ -143,10 +130,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
 
                           boxShadow: [
-                            BoxShadow(color:Colors.black.withOpacity(0.4),
-                              blurRadius: 50,),
+                            BoxShadow(color:Colors.green[900],
+                              blurRadius: 30,
+                            ),
                           ],
 
+
+                          color: PrimaryColor,
+
+
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      bottom:0,
+                      child: Container(
+                        height:heightOfScreen*0.3,
+                        width: widthOfScreen*0.67,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(300),
+
+                          ),
+
+                          boxShadow: [
+                            BoxShadow(color:Colors.green[900],
+                              blurRadius: 20,),
+                          ],
 
                           color: PrimaryColor,
 

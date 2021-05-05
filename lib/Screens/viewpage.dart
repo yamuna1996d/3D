@@ -8,6 +8,9 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:imageview360/imageview360.dart';
 import 'package:flutter/material.dart';
 
+import '../models/product.dart';
+//package:dapp/NavBar_Components/More_Products.dart;
+
 class DemoPage extends StatefulWidget {
   DemoPage({Key key, this.title}) : super(key: key);
 

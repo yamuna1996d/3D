@@ -14,7 +14,7 @@ class _MyWishlistState extends State<MyWishlist> {
   List<Product> products = [
     Product(
         'assets/car/1.jpeg',
-        'Boat roackerz ',
+        'Boat roackerz camera ',
         'description',
         450000),
     Product(
