@@ -1,3 +1,4 @@
+import 'package:dapp/NavBar_Components/Notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../constraints.dart';
@@ -75,7 +76,9 @@ class Profile extends StatelessWidget {
             ProfileMenu(
               text: "Notifications",
               icon: "assets/icons/bell.svg",
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Notifications()));
+              },
             ),
             ProfileMenu(
               text: "Settings",

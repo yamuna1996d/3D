@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.only(
                       left: DefaultPadding,
                       right: DefaultPadding,
-                      top: 15+DefaultPadding,
+                      top: 25+DefaultPadding,
                       bottom: 25+ DefaultPadding,
                     ),
                     decoration: BoxDecoration(
@@ -70,12 +70,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 90),
-                    child: Positioned(
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
+
+                     Padding(
+                      padding: EdgeInsets.only(top: 90),
                       child: Container(
                         alignment: Alignment.center,
                         margin: EdgeInsets.symmetric(
@@ -114,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
+
                 ],
               ),
             ),
