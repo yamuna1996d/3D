@@ -3,9 +3,9 @@ import 'package:dapp/constraints.dart';
 import 'package:dapp/models/ServiceModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:google_fonts/google_fonts.dart';
 class ServiceList extends StatelessWidget {
   const ServiceList({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +18,11 @@ class ServiceList extends StatelessWidget {
               }),
           elevation: 0,
 
-          title: Text("Our Services",style: TextStyle(
-              color: Colors.black
-          ),),
+          title: Text("Our Services",style: GoogleFonts.notoSans(color: Colors.black)),
         ),
         body:Container(
           margin: EdgeInsets.all(10),
           child: Column(
-
             children: [
               //SizedBox(height: 10,),
               Expanded(child: GridView.builder(

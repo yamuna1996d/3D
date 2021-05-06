@@ -8,7 +8,10 @@ const backgroundColor = Color(0xFFF9F8FD);
 const Color darkGrey = Color(0xff202020);
 const double DefaultPadding = 20.0;
 const Color yellow = Color(0xffFDC054);
-
+const Color lightBlue = Color(0xffdbf0f1);
+const Color darkBlue = Color(0xff39888e);
+const Color lightyellow = Color(0xffffe9a7);
+const Color pink = Color(0xfff1e7f5);
 const List<BoxShadow> shadow = [
   BoxShadow(color: Colors.black12, offset: Offset(0, 3), blurRadius: 6)
 ];
