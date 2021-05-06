@@ -20,7 +20,9 @@ class HomeScreen extends StatelessWidget {
                         Icons.arrow_back_ios,
                         color: Colors.white,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     ),
                     IconButton(
                       icon: Icon(
