@@ -3,7 +3,6 @@ import 'package:dapp/constraints.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
 import '../components/EcomorServ.dart';
 import 'Products.dart';
 
@@ -27,8 +26,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-
             SizedBox(height: 70,),
             Padding(
               padding: EdgeInsets.only(top: 70,left: 60,right: 10),

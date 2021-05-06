@@ -1,4 +1,6 @@
 import 'package:dapp/Screens/OrderSuccessScreen.dart';
+import 'package:dapp/Screens/address/new_address.dart';
+import 'package:dapp/models/Address_Model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -6,6 +8,7 @@ import 'package:dapp/Screens/address/User_location.dart';
 import '../../constraints.dart';
 import 'address_form.dart';
 class AddAddressPage extends StatefulWidget {
+
 
   @override
   _AddAddressPageState createState() => _AddAddressPageState();
@@ -24,6 +27,9 @@ class _AddAddressPageState extends State<AddAddressPage> {
 
 
   final GlobalKey _formGlobalKey=GlobalKey();
+
+  List city=[];
+  List house=[];
 
 
 
@@ -444,7 +450,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                               ],
                               borderRadius: BorderRadius.circular(9.0)),
                           child: Center(
-                            child: Text("Pay Now",
+                            child: Text("Proceed",
                                 style: const TextStyle(
                                     color: const Color(0xfffefefe),
                                     fontWeight: FontWeight.w600,
@@ -457,10 +463,43 @@ class _AddAddressPageState extends State<AddAddressPage> {
                           if(form.validate()){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderSuccess()));
                           }
+                          var getHouse= _house.text.toString();
+                          var getCity=_city.text.toString();
+                          setState(() {
 
+                             city.add(getCity);
+                             house.add(getHouse);
+
+                          });
                         },
                       ),
-                    ))
+                    )),
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount:city.length==null ? 0 : city.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      child: ListTile(
+
+                        leading: GestureDetector(
+                            onTap: (){
+
+                              //print("delete checked"+index.toString());
+                              setState(() {
+                                city.removeAt(index);
+                                house.removeAt(index);
+
+                              });
+                            },
+                            child: Icon(Icons.close, color:Colors.red)
+                        ),
+
+
+
+                        title: Text(city[index].toString() + ", "  + house[index] ),
+                      ),
+                    );
+                  },),
 
 
 

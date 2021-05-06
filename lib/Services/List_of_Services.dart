@@ -9,15 +9,14 @@ class ServiceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: backgroundColor,
-        appBar: AppBar(
-          backgroundColor:backgroundColor,
-          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),
-              onPressed:(){
-                Navigator.pop(context);
-              }),
-          elevation: 0,
-
+      backgroundColor: backgroundColor,
+      appBar: AppBar(
+        backgroundColor:backgroundColor,
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),
+            onPressed:(){
+          Navigator.pop(context);
+            }),
+        elevation: 0,
           title: Text("Our Services",style: GoogleFonts.notoSans(color: Colors.black)),
         ),
         body:Container(
@@ -38,6 +37,8 @@ class ServiceList extends StatelessWidget {
             ],
           ),
         )
+
+
     );
 
   }
