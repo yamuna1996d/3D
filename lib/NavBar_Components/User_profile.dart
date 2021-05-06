@@ -87,7 +87,7 @@ class Profile extends StatelessWidget {
               text: "Settings",
               icon: "assets/icons/settings.svg",
               press: () {},
-
+            ),
             ProfileMenu(
               text: "Help Center",
               icon: "assets/icons/social-care.svg",
