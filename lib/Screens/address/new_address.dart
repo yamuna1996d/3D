@@ -72,14 +72,18 @@ class _NewAddressState extends State<NewAddress> {
              onPressed: (){Navigator.pop(context);}),
          backgroundColor:backgroundColor,
          elevation: 0,
+         title:Text("My Address",style: TextStyle(
+            fontSize: 20,
+           color: Colors.black
+    ),),
        ),
       body: Container(
         margin: EdgeInsets.all(10),
         child: Column(
           children: [
-            Text("My Address",style: TextStyle(
-              fontSize: 20
-            ),),
+            // Text("My Address",style: TextStyle(
+            //   fontSize: 20
+            // ),),
             SizedBox(height: 20,),
             Row(
               children: [
@@ -98,8 +102,10 @@ class _NewAddressState extends State<NewAddress> {
               itemCount:city.length==null ? 0 : city.length,
               itemBuilder: (context, index) {
                 return Card(
+                  
                   color: backgroundColor,
-                  elevation: 0,
+                  elevation: 1,
+
                   child: ListTile(
                     leading: Icon(Icons.location_city_outlined),
                     trailing: GestureDetector(
@@ -125,7 +131,7 @@ class _NewAddressState extends State<NewAddress> {
                 );
 
               },),
-            Divider()
+            //Divider()
 
           ],
 
@@ -140,6 +146,7 @@ class _NewAddressState extends State<NewAddress> {
      return Container(
 
        decoration: BoxDecoration(
+         color: backgroundColor,
          borderRadius: BorderRadius.only(
            topLeft: Radius.circular(10),
            topRight: Radius.circular(10),
@@ -518,33 +525,37 @@ class _NewAddressState extends State<NewAddress> {
                                          fontSize: 20.0)),
                                ),
                              ),
+
                              onTap: (){
-                               final FormState form = _formGlobalKey.currentState;
-                               if(form.validate()){
-                                 //Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderSuccess()));
-                                 Navigator.pop(context);
-                               }
                                var getHouse= _house.text.toString();
                                var getCity=_city.text.toString();
                                var getPin=_pincode.text.toString();
-                               setState(() {
 
-                                 city.add(getCity);
-                                 house.add(getHouse);
-                                 pin.add(getPin);
+                               final FormState form = _formGlobalKey.currentState;
+                               if(form.validate()){
+                                 //Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderSuccess()));
+
+                                 setState(() {
+
+                                   city.add(getCity);
+                                   house.add(getHouse);
+                                   pin.add(getPin);
+                                                                      
+                                 });
+                                 Navigator.pop(context);
+
+                               }
+                               _state.text=" ";
+                               _city.text=" ";
+                               _phone.text=" ";
+                               _pincode.text=" ";
+                               _name.text=" ";
+                               _house.text=" ";
+                               _district.text=" ";
+                               _landmark.text=" ";
 
 
 
-                                 _state.text=" ";
-                                 _city.text=" ";
-                                 _phone.text=" ";
-                                 _pincode.text=" ";
-                                 _name.text=" ";
-                                 _house.text=" ";
-                                 _district.text=" ";
-                                 _landmark.text=" ";
-
-                               });
                              },
                            ),
                          )),
