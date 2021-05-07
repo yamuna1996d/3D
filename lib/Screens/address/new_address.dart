@@ -1,5 +1,3 @@
-import 'package:dapp/components/IteamCard.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:dapp/constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -487,8 +485,6 @@ class _NewAddressState extends State<NewAddress> {
                           FocusScope.of(context).requestFocus(_nameFocusNode);
                         },
                         decoration: InputDecoration(
-
-
                           hintText: "Landmark",
                           labelText: "Landmark",
 
@@ -511,7 +507,6 @@ class _NewAddressState extends State<NewAddress> {
                           return null;
                         },
                       ),
-
                       SizedBox(height: 20,),
                       Center(
                           child: Padding(
