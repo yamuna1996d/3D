@@ -1,18 +1,15 @@
 import 'package:dapp/NavBar_Components/user_profile/Change_Password.dart';
 import 'package:dapp/NavBar_Components/whishlist_products.dart';
-import 'package:dapp/Screens/address/add_address_page.dart';
 import 'package:dapp/Screens/address/new_address.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../constraints.dart';
 
 class UserAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
+      backgroundColor: Colors.white,
       body: Container(
           margin: EdgeInsets.all(10),
           child: Column(
