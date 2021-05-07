@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'card.dart';
 import 'list.dart';
 class HomeScreen extends StatelessWidget {
@@ -59,10 +60,10 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Text(
                             'Service Providers',
-                            style: TextStyle(
+                            style: GoogleFonts.notoSans(
                               fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                            ),
+                              fontSize: 20
+                            )
                           ),
                           SizedBox(
                             height: 10,

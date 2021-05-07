@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'detailpage.dart';
 
@@ -35,19 +36,18 @@ class StylistCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     stylist['StudioName'],
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20,
-                    ),
+                    style: GoogleFonts.itim(
+                      fontSize: 20
+                    )
                   ),
                   SizedBox(
                     height: 8,
                   ),
                   Text(
                     stylist['place'],
-                    style: TextStyle(
-                      fontWeight: FontWeight.w300,
-                    ),
+                    style: GoogleFonts.gildaDisplay(
+                      fontWeight: FontWeight.w600
+                    )
                   ),
                   SizedBox(
                     height: 8,
@@ -71,7 +71,6 @@ class StylistCard extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-
                     height: 10,
                   ),
                   MaterialButton(

@@ -17,7 +17,8 @@ class ServiceList extends StatelessWidget {
           Navigator.pop(context);
             }),
         elevation: 0,
-          title: Text("Our Services",style: GoogleFonts.notoSans(color: Colors.black)),
+          title: Text("Our Services",style: GoogleFonts.notoSans(color: Colors.black,
+          fontWeight: FontWeight.bold)),
         ),
         body:Container(
           margin: EdgeInsets.all(10),
